@@ -3,6 +3,5 @@
     apt: name=redis-server state=latest update_cache=yes
 
   - name: restart redis
-    sudo_user: root
     shell: service redis-server restart
 
