@@ -10,3 +10,5 @@
       - libsqlite3-dev
       - libzmq-dev
       - libaspell-dev
+      - libqtwebkit-dev
+      - xvfb

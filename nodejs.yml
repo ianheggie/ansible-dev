@@ -1,14 +1,6 @@
 ---
-  - name: nodejs dependencies
-    apt: name={{item}} state=latest update_cache=yes
-    with_items:
-      - python-software-properties
-      - python
-      - g++
-      - make
-
-  - name: brightbox ruby repo
+  - name: nodejs ppa
     apt_repository: repo=ppa:chris-lea/node.js
 
-  - name: install ruby packages
+  - name: install nodejs packages
     apt: name=nodejs state=latest update_cache=yes
