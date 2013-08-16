@@ -3,12 +3,12 @@
     apt: name={{item}} state=latest update_cache=yes
     with_items:
       - imagemagick
-      - libproj-dev
       - libxml2-dev
       - libxslt1-dev
       - sqlite3
       - libsqlite3-dev
-      - libzmq-dev
-      - libaspell-dev
       - libqtwebkit-dev
       - xvfb
+      # - libzmq-dev
+      # - libproj-dev
+      # - libaspell-dev

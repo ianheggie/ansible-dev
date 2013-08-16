@@ -11,7 +11,7 @@
     - name: download elasticsearch
       get_url: url=https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-{{version}}.deb dest=~/elasticsearch-{{version}}.deb
     - name: install elasticsearch
-      command: dpkg -i ~/elasticsearch-{{version}}.deb creates=/etc/elasticsearch
+      shell: dpkg -i ~/elasticsearch-{{version}}.deb creates=/etc/elasticsearch
 
   handlers:
     - name: restart elasticsearch
