@@ -9,7 +9,7 @@
 
     - name: get the ruby build repo
       sudo: no
-      git: repo=git@github.com:sstephenson/ruby-build.git dest=~/ruby-build force=yes
+      git: repo=https://github.com/sstephenson/ruby-build.git dest=~/ruby-build force=yes
 
     - name: install ruby-build
       sudo: yes

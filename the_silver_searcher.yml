@@ -10,7 +10,7 @@
       - stow
 
   - name: clone silver searcher repo
-    git: repo=git://github.com/ggreer/the_silver_searcher.git dest=/tmp/ag
+    git: repo=https://github.com/ggreer/the_silver_searcher.git dest=/tmp/ag
 
   - name: ensure destination dir exists
     file: path=/usr/local/stow/the_silver_searcher state=directory owner=root group=root
