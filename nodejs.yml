@@ -4,3 +4,10 @@
 
   - name: install nodejs packages
     apt: name=nodejs state=latest update_cache=yes
+
+  - name: install some global node packages
+    npm: name={{item}} global=yes state=latest
+    with_items:
+      - jshint
+      - jslint
+      - grunt-cli
