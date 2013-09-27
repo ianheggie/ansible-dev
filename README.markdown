@@ -25,7 +25,6 @@ all I need for my dev boxes at the moment.
     
       config.vm.provision :ansible do |ansible|
         ansible.playbook = 'playbook.yml'
-        ansible.inventory_file = 'vagrant_host'
         ansible.verbose = true
       end
     
@@ -50,11 +49,6 @@ all I need for my dev boxes at the moment.
          - include: tasks/postgresql.yml
     
      - include: tasks/phantomjs.yml
-
-## Example vagrant_host
-
-    [vagrant]
-    192.168.1.1
     
 ## TODO
 
