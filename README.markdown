@@ -53,3 +53,4 @@ all I need for my dev boxes at the moment.
 ## TODO
 
 1. turn on query logging on the databases (for dev)
+2. go through each play and make sure apt deps are install for each one
