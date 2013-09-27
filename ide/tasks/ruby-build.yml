@@ -1,0 +1,27 @@
+---
+- name: dep for ree
+  sudo: yes
+  apt: name=libreadline-dev
+  when: build_version == "ree-1.8.7-2012.02"
+
+- name: get the ruby build repo
+  sudo: no
+  git: repo=https://github.com/sstephenson/ruby-build.git dest=~/ruby-build force=yes
+
+- name: install ruby-build
+  sudo: yes
+  command: ./install.sh chdir=/home/vagrant/ruby-build creates=/usr/local/bin/ruby-build
+
+# build ruby for chruby
+# version is the chruby version
+# build_version is the ruby-build version
+- name: install ruby {{build_version}} -> {{version}}
+  sudo: yes
+  shell: ruby-build {{build_version}} /opt/rubies/{{version}} creates=/opt/rubies/{{version}}
+  when: build_version != "ree-1.8.7-2012.02"
+
+# extra CONFIGURE_OPTS is for ree, should be moved to a conditional
+- name: build {{build_version}} -> {{version}}
+  sudo: yes
+  shell: CONFIGURE_OPTS=--no-tcmalloc ruby-build {{build_version}} /opt/rubies/{{version}} creates=/opt/rubies/{{version}}
+  when: build_version == "ree-1.8.7-2012.02"

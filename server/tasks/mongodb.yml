@@ -1,4 +1,9 @@
 ---
+  - name: dependencies
+    apt: name={{item}} state=latest update_cache=yes
+    with_items:
+      - python-software-properties
+
   - name: 10gen keys
     command: apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 

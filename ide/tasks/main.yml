@@ -1,0 +1,11 @@
+---
+- include: ide.yml
+- include: the_silver_searcher.yml
+- include: rails.yml
+- include: nodejs.yml
+- include: phantomjs.yml
+
+- include: wemux.yml host_list=vagrant
+- include: rvm.yml version=ruby-1.9.3-p194
+- include: rvm.yml version=ruby-1.9.3-p448
+- include: rvm.yml version=ree-1.8.7-2012.02

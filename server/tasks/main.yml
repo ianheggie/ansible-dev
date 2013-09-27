@@ -1,0 +1,9 @@
+---
+- include: redis.yml
+- include: mongodb.yml
+- include: haproxy.yml
+- include: memcached.yml
+- include: mysql.yml
+- include: postgresql.yml
+- include: elasticsearch.yml
+- include: nginx.yml
