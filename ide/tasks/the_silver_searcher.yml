@@ -8,18 +8,24 @@
     - zlib1g-dev
     - liblzma-dev
     - stow
+  tags: the_silver_searcher
 
 - name: clone silver searcher repo
   git: repo=https://github.com/ggreer/the_silver_searcher.git dest=/tmp/ag
+  tags: the_silver_searcher
 
 - name: ensure destination dir exists
   file: path=/usr/local/stow/the_silver_searcher state=directory owner=root group=root
+  tags: the_silver_searcher
 
 - name: build silver searcher
   shell: ./build.sh --prefix=/usr/local/stow/the_silver_searcher chdir=/tmp/ag
+  tags: the_silver_searcher
 
 - name: install silver searcher
   shell: make install chdir=/tmp/ag creates=/usr/local/stow/the_silver_searcher/bin
+  tags: the_silver_searcher
 
 - name: stow silver searcher
   shell: stow -R -d /usr/local/stow -t /usr/local the_silver_searcher
+  tags: the_silver_searcher

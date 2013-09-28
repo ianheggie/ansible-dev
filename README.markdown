@@ -23,6 +23,8 @@
       config.vm.provision :ansible do |ansible|
         ansible.playbook = 'site.yml'
         ansible.verbose = true
+        ansible.tags = %w[locale vagrant]
+        # ansible.host = 'default' default value
       end
 
       config.vm.provision :shell, :path => 'roles/install.sh'
@@ -47,7 +49,7 @@
 Recent versions of vagrant will create a hosts file with the host default
 defined. The only reason site.yml and dev.yml are two files and not one is so
 that you might create a host file and a {production|staging|whatever}.yml and
-use the same setup for real server provisioning.
+use the same setup for real server provisioning. 
 
 ## TODO
 

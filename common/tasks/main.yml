@@ -8,6 +8,6 @@
 - name: set /etc/localtime to $timezone
   command: /bin/cp /usr/share/zoneinfo/$timezone /etc/localtime
 - name: set /etc/timezone to $timezone
-  template: src=timezone.j2 dest=/etc/timezone
+  template: src=timezone dest=/etc/timezone
   notify: update tzdata
   tags: locale
