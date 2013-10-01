@@ -23,7 +23,6 @@
       config.vm.provision :ansible do |ansible|
         ansible.playbook = 'site.yml'
         ansible.verbose = true
-        ansible.tags = %w[locale vagrant]
         # ansible.host = 'default' default value
       end
 
@@ -44,7 +43,6 @@
         - common
         - vagrant
         - ide
-        - otb
 
 Recent versions of vagrant will create a hosts file with the host default
 defined. The only reason site.yml and dev.yml are two files and not one is so
