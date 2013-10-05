@@ -1,6 +1,6 @@
 ---
 - name: install some dependencies for some gems
-  apt: name={{item}} state=latest update_cache=yes
+  apt: name={{item}}
   with_items:
     - imagemagick
     - libxml2-dev

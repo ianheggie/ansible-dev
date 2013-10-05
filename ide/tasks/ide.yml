@@ -1,6 +1,6 @@
 ---
 - name: install usual packages
-  apt: name={{item}} state=latest update_cache=yes
+  apt: name={{item}}
   with_items:
     - aptitude
     - build-essential

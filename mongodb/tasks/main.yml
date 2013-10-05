@@ -1,6 +1,6 @@
 ---
 - name: dependencies
-  apt: name={{item}} state=latest update_cache=yes
+  apt: name={{item}}
   with_items:
     - python-software-properties
 
@@ -11,4 +11,4 @@
   apt_repository: repo='deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen'
 
 - name: install mongodb packages
-  apt: name=mongodb-10gen state=latest update_cache=yes
+  apt: name=mongodb-10gen update_cache=yes

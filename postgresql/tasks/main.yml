@@ -1,6 +1,6 @@
 ---
 - name: install postgresql packages
-  apt: name={{item}} state=latest update_cache=yes
+  apt: name={{item}}
   with_items:
     - postgresql-9.1
     - postgresql-client-9.1

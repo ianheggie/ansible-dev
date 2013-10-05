@@ -1,6 +1,6 @@
 ---
 - name: silver searcher dependencies
-  apt: name={{ item }} state=latest update_cache=yes
+  apt: name={{item}}
   with_items:
     - automake
     - pkg-config

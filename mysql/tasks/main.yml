@@ -1,6 +1,6 @@
 ---
 - name: install mysql packages
-  apt: name={{item}} state=latest update_cache=yes
+  apt: name={{item}}
   with_items:
     - mysql-server
     - mysql-client
