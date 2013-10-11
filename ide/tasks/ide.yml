@@ -27,6 +27,7 @@
     - stow
     - cowsay
     - markdown
+    - gnupg2
 
 - name: link ack
   file: src=/usr/bin/ack-grep dest=/usr/local/bin/ack owner=root group=root state=link

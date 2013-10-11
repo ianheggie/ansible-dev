@@ -15,4 +15,5 @@
   with_items:
     - jshint
     - jslint
+    - js-beautify
     - grunt-cli
