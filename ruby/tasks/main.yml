@@ -1,6 +1,6 @@
 ---
 - name: ruby dependencies
-  apt: name={{item}} state=latest update_cache=yes
+  apt: name={{item}}
   with_items:
     - python-software-properties
 
@@ -8,7 +8,7 @@
   apt_repository: repo=ppa:brightbox/ruby-ng-experimental
 
 - name: install ruby packages
-  apt: name={{item}} state=latest update_cache=yes
+  apt: name={{item}} update_cache=yes
   with_items:
     - "{{version}}"
     - "{{version}}-dev"
@@ -18,7 +18,7 @@
   shell: ruby-switch --set {{version}}
 
 - name: install bundler
-  gem: name=bundler state=latest
+  gem: name=bundler
 
 - name: quick ugly fix for https://github.com/bundler/bundler/issues/2343
   file: path=/var/lib/gems/2.0.0/build_info owner=root group=root mode=0777 state=directory

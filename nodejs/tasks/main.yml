@@ -1,6 +1,6 @@
 ---
 - name: dependencies
-  apt: name={{item}} state=latest update_cache=yes
+  apt: name={{item}}
   with_items:
     - python-software-properties
 
@@ -8,10 +8,10 @@
   apt_repository: repo=ppa:chris-lea/node.js
 
 - name: install nodejs packages
-  apt: name=nodejs state=latest update_cache=yes
+  apt: name=nodejs update_cache=yes
 
 - name: install some global node packages
-  npm: name={{item}} global=yes state=latest
+  npm: name={{item}} global=yes
   with_items:
     - jshint
     - jslint
