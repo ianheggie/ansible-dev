@@ -1,0 +1,15 @@
+---
+- name: dependencies
+  apt: name={{item}}
+  with_items:
+    - python-software-properties
+
+- name: git ppa
+  apt_repository: repo=ppa:git-core/ppa
+
+- name: install git
+  apt: name={{item}} update_cache=yes
+  with_items:
+    - git
+    - git-annex
+    - tig
