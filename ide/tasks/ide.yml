@@ -1,9 +1,12 @@
 ---
 - name: install usual packages
-  apt: name={{item}}
+  apt: name={{item}} update_cache=yes
   with_items:
     - aptitude
     - build-essential
+    - git
+    - git-annex
+    - tig
     - vim
     - ranger
     - htop

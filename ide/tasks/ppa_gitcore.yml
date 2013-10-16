@@ -6,10 +6,3 @@
 
 - name: git ppa
   apt_repository: repo=ppa:git-core/ppa
-
-- name: install git and friends
-  apt: name={{item}} update_cache=yes
-  with_items:
-    - git
-    - git-annex
-    - tig

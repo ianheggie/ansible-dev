@@ -1,5 +1,6 @@
 ---
-- include: git.yml
+- include: ppa_pirho.yml
+- include: ppa_gitcore.yml
 - include: ide.yml
 - include: the_silver_searcher.yml
 - include: rails.yml

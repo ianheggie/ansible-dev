@@ -1,0 +1,8 @@
+---
+- name: dependencies
+  apt: name={{item}}
+  with_items:
+    - python-software-properties
+
+- name: pi rho ppa
+  apt_repository: repo=ppa:pi-rho/dev
