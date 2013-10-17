@@ -1,13 +1,13 @@
 ---
 - name: install usual packages
-  apt: name={{item}}
+  apt: name={{item}} update_cache=yes
   with_items:
     - aptitude
     - build-essential
-    - vim
     - git
     - git-annex
     - tig
+    - vim
     - ranger
     - htop
     - tmux
@@ -39,7 +39,7 @@
   git: repo=https://github.com/hut/ranger.git dest=/tmp/ranger
 
 - name: install ranger
-  shell: make install chdir=/tmp/ranger #creates=/usr/local/stow/the_silver_searcher/bin
+  shell: make install chdir=/tmp/ranger creates=/usr/local/bin/ranger
 
 - name: ranger config
   sudo: no
