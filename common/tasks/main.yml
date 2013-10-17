@@ -11,3 +11,6 @@
   template: src=timezone dest=/etc/timezone
   notify: update tzdata
   tags: locale
+
+- name: install logrotate
+  apt: name=logrotate update-cache=Yes
