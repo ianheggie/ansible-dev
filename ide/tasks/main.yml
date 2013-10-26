@@ -2,7 +2,13 @@
 - include: ppa_pirho.yml
 - include: ppa_gitcore.yml
 - include: ide.yml
-# - include: the_silver_searcher.yml
 - include: rails.yml
 - include: phantomjs.yml
-# - include: wemux.yml host_list=vagrant
+
+- name: install some global node packages
+  npm: name={{item}} global=yes
+  with_items:
+    - jshint
+    - jslint
+    - js-beautify
+    - grunt-cli

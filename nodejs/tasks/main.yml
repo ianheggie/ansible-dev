@@ -2,6 +2,7 @@
 - name: dependencies
   apt: name={{item}}
   with_items:
+    - python-pycurl
     - python-software-properties
 
 - name: nodejs ppa
@@ -9,11 +10,3 @@
 
 - name: install nodejs packages
   apt: name=nodejs update_cache=yes
-
-- name: install some global node packages
-  npm: name={{item}} global=yes
-  with_items:
-    - jshint
-    - jslint
-    - js-beautify
-    - grunt-cli

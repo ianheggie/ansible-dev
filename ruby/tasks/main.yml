@@ -2,6 +2,7 @@
 - name: ruby dependencies
   apt: name={{item}}
   with_items:
+    - python-pycurl
     - python-software-properties
 
 - name: brightbox ruby repo
