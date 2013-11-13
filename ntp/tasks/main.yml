@@ -1,0 +1,5 @@
+---
+- name: ntp
+  apt: name=ntp
+  notify:
+    - restart ntp
