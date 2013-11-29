@@ -1,9 +1,9 @@
 ---
 - name: install rvm
   sudo: no
-  shell: curl -L https://get.rvm.io | bash -s stable --autolibs=enabled creates=/home/vagrant/.rvm
+  shell: curl -L https://get.rvm.io | bash -s stable --autolibs=enabled -- --ignore-dotfiles creates=/home/vagrant/.rvm
 
 - name: build {{version}}
   sudo: no
-  command: rvm install {{version}}
+  shell: $HOME/.rvm/bin/rvm install {{version}}
   when: version is defined
