@@ -7,8 +7,8 @@
     - libxslt1-dev
     - sqlite3
     - libsqlite3-dev
-    - libqtwebkit-dev
-    - xvfb
+    # - libqtwebkit-dev
+    # - xvfb
     # - libzmq-dev
     # - libproj-dev
     # - libaspell-dev

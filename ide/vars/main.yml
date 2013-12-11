@@ -1,3 +1,4 @@
 ---
 chruby_version: 0.3.6
 phantom: phantomjs-1.9.1-linux-x86_64
+googlecl: googlecl_0.9.14-2_all
