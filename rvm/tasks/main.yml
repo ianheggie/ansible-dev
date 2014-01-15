@@ -1,7 +1,7 @@
 ---
 - name: install rvm
   sudo: no
-  shell: curl -L https://get.rvm.io | bash -s stable --autolibs=enabled -- --ignore-dotfiles creates=/home/vagrant/.rvm
+  shell: curl -L https://get.rvm.io | bash -s stable --autolibs=enabled -- --ignore-dotfiles creates=/home/{{ansible_ssh_user}}/.rvm
 
 - name: build {{version}}
   sudo: no
