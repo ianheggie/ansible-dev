@@ -23,3 +23,17 @@
 
 - name: install etckeeper
   apt: name=etckeeper
+
+- name: dont use bzr for etckeeper
+  lineinfile: dest=/etc/etckeeper/etckeeper.conf regexp="^VCS=\"(?!git)" state=absent
+
+- name: use git for etckeeper
+  lineinfile: dest=/etc/etckeeper/etckeeper.conf regexp="^VCS=\"git\"" insertbefore=BOF line="VCS=\"git\""
+
+- name: initialize repo
+  command: etckeeper init creates=/etc/.git
+
+- name: initial commit
+  command: etckeeper commit "Ansible commit"
+  ignore_errors: yes
+
