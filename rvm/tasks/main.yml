@@ -1,9 +1,9 @@
 ---
 - name: install rvm
   sudo: no
-  shell: curl -L https://get.rvm.io | bash -s stable --autolibs=enabled -- --ignore-dotfiles creates=/home/{{ansible_ssh_user}}/.rvm
+  shell: curl -L https://get.rvm.io | bash -s stable --autolibs=enabled -- --ignore-dotfiles creates=~/.rvm
 
-- name: build {{version}}
+- name: build {{ruby}}
   sudo: no
-  shell: $HOME/.rvm/bin/rvm install {{version}}
-  when: version is defined
+  shell: ~/.rvm/bin/rvm install {{ruby}}
+  when: ruby is defined
