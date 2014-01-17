@@ -13,7 +13,13 @@
   tags: locale
 
 - name: install logrotate
-  apt: name=logrotate update-cache=Yes
+  apt: name=logrotate update-cache=yes
 
 - name: package deps
   apt: name=python-pycurl
+
+- name: install git
+  apt: name=git
+
+- name: install etckeeper
+  apt: name=etckeeper
