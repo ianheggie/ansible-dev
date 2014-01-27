@@ -9,6 +9,7 @@
     - tig
     - vim
     - ranger
+    - glances
     - htop
     - tmux
     - tree
