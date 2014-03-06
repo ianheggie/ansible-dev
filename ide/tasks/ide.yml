@@ -26,6 +26,9 @@
     - mediainfo
     - stow
     - cowsay
+    - cmatrix
+    - bc
+    - sc
     - markdown
     - gnupg2
     - bison
