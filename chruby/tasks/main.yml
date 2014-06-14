@@ -12,7 +12,7 @@
 
 - name: install
   sudo: yes
-  command: make install chdir=/home/{{ansible_ssh_user}}/chruby-{{version}} creates=/usr/local/share/chruby/chruby.sh
+  command: make install chdir=~{{ansible_ssh_user}}/chruby-{{version}} creates=/usr/local/share/chruby/chruby.sh
 
 - name: profile.d {{version}}
   sudo: yes
